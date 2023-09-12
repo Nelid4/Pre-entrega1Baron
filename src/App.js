@@ -1,35 +1,29 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FormLogin from './components/formLogin';
-import FormRegistro from './components/formRegistro';
 import NavBar from './components/navBar/navBar';
-import { useState } from 'react';
 import ItemListContainer from './components/itemListContainer/itemListContainer'
-
-const numeros = [1,2,3,4,5,6]
-Array.prototype.buscar = function(callback){
-    for(let i = 0; i < this.length; i++){
-        if(callback(this[i]))
-        {return this[i]}
-        
-    }
-}
-const busqueda = numeros.buscar((numeros) => numeros > 5)
-
+import { useState } from 'react';
 
 function App() {
 
 
+const[contador, setContador]=useState(0)
+function sumar () {
+    setContador(contador +1)
+}
 
-    let logueado = true; 
-    let tipoForm = "login";
-    
     return (
     <div className='app'>
 {/* ---- Incluimos NavBar ----*/}
     <NavBar />
 {/* ---- Incluimos ItemListContainer ----*/}
     <ItemListContainer saludo={'Hola! Bienvenid@ a mi tienda de libros usados y nuevos. Ojalá te guste.'}/>
+{/* ---- Contador con estados ---- */}
+    <div className='librosLeidos'>
+        <h3>Contador de libros leidos este año:</h3>
+        <button onClick={sumar}>+</button><h3>{contador}</h3>
+    </div>
+    
     </div>
     );
 
