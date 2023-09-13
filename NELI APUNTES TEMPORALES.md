@@ -20,3 +20,15 @@
     let logueado = true; 
     let tipoForm = "login";
     
+    const numeros = [1,2,3,4,5,6]
+Array.prototype.buscar = function(callback){
+    for(let i = 0; i < this.length; i++){
+        if(callback(this[i]))
+        {return this[i]}
+        
+    }
+}
+const busqueda = numeros.buscar((numeros) => numeros > 5)
+import FormLogin from './components/formLogin'
+import FormRegistro from './components/formRegistro'
+import { useState } from 'react'

@@ -1,9 +1,9 @@
-import './navBar.css';
+import './NavBar.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import CartWidget from '../cartWidget/cartWidget';
+import CartWidget from '../cartWidget/CartWidget';
 import LogoPerico from '../assets/img/logo.png'
 
 function BasicExample() {
